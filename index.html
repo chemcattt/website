@@ -26,15 +26,25 @@
   
   <p><a href="page2.html">Question 1</a>
 
-  <script>
-        // Function to show a popup alert
-        function showPopup() {
-            alert("This is a pop-up!");
-        }
+  
+<script>
+    // Function to show the popup
+    function showPopup() {
+        const popup = document.getElementById("cookieConsentPopup");
+        popup.style.display = "block";
+        popup.classList.add("fade-in");
+    }
 
-        // Set an interval to call the showPopup function every 3000ms (3 seconds)
-        setInterval(showPopup, 3000);
-    </script>
+    // Function to accept cookies and hide the popup
+    function acceptCookies() {
+        const popup = document.getElementById("cookieConsentPopup");
+        popup.style.display = "none";
+    }
+
+    // Show the cookie consent popup every 3 seconds
+    setInterval(showPopup, 3000);
+</script>
+
 
   
 
