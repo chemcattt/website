@@ -23,6 +23,57 @@
     <li>C - Beijing</li>
   </ul>  
 
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational Quiz</title>
+  </head>
+  <body>
+  
+    <h1>Educational Quiz</h1>
+    <p>This is a cute cat</p>
+    <img src="https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg" width="200 px">
+    <a href="page2.html">See a dog</a>
+  
+    <h2>Ordered list of cat names</h2>
+    <p>skibidi __?</p>
+    <p>toilet</p>
+    <ol>
+      <li>Murr</li>
+      <li>Tiger</li>
+      <li>Lion</li>
+      <li>Fluffy</li>
+      <li>Dog</li>
+    </ol>
+  
+    <button onclick="checkAnswer('Fluffy')">Fluffy</button>
+    <button onclick="checkAnswer('Dog')">Dog</button>
+    <button onclick="checkAnswer('Murr')">Murr</button>
+    <button onclick="checkAnswer('Tiger')">Tiger</button>
+    <button onclick="checkAnswer('Lion')">Lion</button>
+  
+    <p id="counter">Correct Answers: 0</p>
+  
+    <script>
+      // Initialize counter
+      let correctAnswers = 0;
+  
+      // Function to check if the answer is correct
+      function checkAnswer(catName) {
+        if (catName === 'Fluffy') {  // Correct answer
+          correctAnswers++;
+        }
+  
+        // Update the counter display
+        document.getElementById('counter').innerText = `Correct Answers: ${correctAnswers}`;
+      }
+    </script>
+  
+  </body>
+  </html>
+
 
 </body>
 </html>
