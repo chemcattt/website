@@ -2,6 +2,10 @@
 body{
     text-align: center;
     font-family: 'Arial';
+
+    background: rgb(208, 253, 253);
+    color: rgb(199, 124, 124);
+
     background: lightcyan;
     color: rgb(90, 44, 44);
 
