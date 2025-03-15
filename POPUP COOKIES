@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Popup Ads</title>
+  <style>
+    /* Basic style for popup */
+    .popup {
+      position: fixed;
+      top: 20%;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 20px;
+      border-radius: 8px;
+      display: none;
+      z-index: 1000;
+    }
+    .popup .accept-btn {
+      background-color: green;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Popup Ad Structure -->
+  <div id="popup" class="popup">
+    <h2>YOU MUST ACCEPT COOKIES</h2>
+    <p>Click to accept cookies:</p>
+    <button class="accept-btn" onclick="acceptPopup()">Accept</button>
+  </div>
+
+  <script>
+    // Function to generate a random time between 2.5 seconds (2500ms) and 30 seconds (30000ms)
+    function getRandomTime() {
+      return Math.floor(Math.random() * (30000 - 2500 + 1)) + 2500;
+    }
+
+    // Function to show the popup ad
+    function showPopup() {
+      const popup = document.getElementById('popup');
+      popup.style.display = 'block'; // Show the popup
+    }
+
+    // Function to hide the popup when the user clicks "Accept"
+    function acceptPopup() {
+      const popup = document.getElementById('popup');
+      popup.style.display = 'none'; // Hide the popup
+      // Set the next random interval to show the popup again
+      setTimeout(showPopup, getRandomTime());
+    }
+
+    // Initially show the popup after a random time interval
+    setTimeout(showPopup, getRandomTime());
+  </script>
+
+</body>
+</html>
