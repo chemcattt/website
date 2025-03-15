@@ -1,0 +1,43 @@
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <p>Do you really think you are smart?</p>
+                <div class="modal-buttons">
+                    <button onclick="accept()">Yes</button>
+                    <button onclick="dismiss()">Umm maybe</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="status" class="status"></div>
+
+        <script>
+            let modal = document.getElementById("myModal");
+            let status = document.getElementById("status");
+
+            // Function to show the modal
+            function showModal() {
+                modal.style.display = "block";
+            }
+
+            // Function to handle accept action
+            function accept() {
+                modal.style.display = "none"; // Close the modal
+                status.textContent = "ARE YOU SURE?";
+            }
+
+            // Function to handle dismiss action
+            function dismiss() {
+                modal.style.display = "none"; // Close the modal
+                status.textContent = " ";
+            }
+
+            // Function to repeatedly show the modal every 3 seconds
+            function startPopups() {
+                setInterval(() => {
+                    showModal();
+                }, 3000);
+            }
+
+            // Start the popups when the page loads
+            window.onload = startPopups;
+        </script>
